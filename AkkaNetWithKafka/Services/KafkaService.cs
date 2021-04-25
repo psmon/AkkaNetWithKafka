@@ -5,6 +5,8 @@ using Microsoft.Extensions.Hosting;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using ConsumerSystem = AkkaNetWithKafka.Modules.ConsumerSystem;
+using ProducerSystem = AkkaNetWithKafka.Modules.ProducerSystem;
 
 namespace AkkaNetWithKafka.Services
 {
@@ -43,13 +45,14 @@ namespace AkkaNetWithKafka.Services
                 ProducerName = "producer1",
             });
 
+            
             List<string> messages = new List<string>();
             for (int i = 0; i < 10; i++)
             {
                 messages.Add($"message-{i}");
             }
 
-            //보너스 : 생산의 속도를 조절할수 있습니다.
+            //보너스 : 생산의 TPS 속도를 조절할수 있습니다.
             int tps = 10;
             KafkaProducerSystem.SinkMessage("producer1", "akka100", messages, tps);
 
