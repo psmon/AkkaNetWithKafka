@@ -1,12 +1,8 @@
 ﻿using Akka.Actor;
-using AkkaDotModule.Config;
 using AkkaDotModule.Kafka;
 using AkkaNetWithKafka.Actors;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
