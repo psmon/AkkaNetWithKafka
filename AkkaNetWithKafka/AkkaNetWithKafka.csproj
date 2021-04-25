@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="akka.kafka.conf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="akka.kafka.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AkkaDotModule.Webnori" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.14" />
+  </ItemGroup>
+
+</Project>
